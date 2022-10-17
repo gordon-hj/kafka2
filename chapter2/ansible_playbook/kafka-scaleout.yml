@@ -1,11 +1,11 @@
 ---
-- hosts: peter-zk03.foo.bar
+- hosts: gordon-zk-3.foo.bar
   become: true
   connection: ssh
   vars:
     - kafkaversion: 2.6.0
     - brokerid: 4
-    - zookeeperinfo: peter-zk01.foo.bar:2181,peter-zk02.foo.bar:2181,peter-zk03.foo.bar:2181
+    - zookeeperinfo: gordon-zk-1.foo.bar:2181,gordon-zk-2.foo.bar:2181,gordon-zk-3.foo.bar:2181
     - dir_path: /data/kafka-logs
   roles:
     - common
